@@ -9,7 +9,7 @@ import Listrumah from './pages/Listrumah.jsx';
 
 function App() {
   return (
-    <Router basename="/frontend_UTS">
+    <Router basename="/frontend">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/listrumah" element={<Listrumah />} />
