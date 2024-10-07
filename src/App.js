@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
-import "./index.js"
+import "./index.js";
 import Createpages from './pages/Createpages.jsx';
 import Editpage from './pages/Editpage.jsx';
 import Dashboardadmin from './pages/Dashboardadmin.jsx';
@@ -9,7 +9,7 @@ import Listrumah from './pages/Listrumah.jsx';
 
 function App() {
   return (
-    <Router basename="/frontend">
+    <Router>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/listrumah" element={<Listrumah />} />
