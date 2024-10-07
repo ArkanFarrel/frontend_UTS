@@ -80,7 +80,6 @@ const Dashboard = () => {
       console.log(`Delete URL: ${deleteUrl}`);
       await axios.delete(deleteUrl);
       
-      // Hapus data dari tabel setelah berhasil
       setRows((prevRows) => prevRows.filter(row => row.id !== deleteId));
   
       setDeleteId(null);

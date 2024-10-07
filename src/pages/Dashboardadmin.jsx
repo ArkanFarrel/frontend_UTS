@@ -77,7 +77,6 @@ const Dashboardadmin = () => {
       console.log(`Delete URL: ${deleteUrl}`);
       await axios.delete(deleteUrl);
       
-      // Hapus data dari tabel setelah berhasil
       setRows((prevRows) => prevRows.filter(row => row.id !== deleteId));
   
       setDeleteId(null);
@@ -176,9 +175,9 @@ const Dashboardadmin = () => {
         </TableContainer>
       </Paper>
 
-              {/* Popup add new Property disini */}
+              {/* Popup add new Admin disini */}
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Add New Property</DialogTitle>
+        <DialogTitle>Add New Admin</DialogTitle>
         <DialogContent>
           <TextField autoFocus margin="dense" name="name" label="Admin Name" fullWidth value={newAdmin.name} onChange={handleChange} />
           <TextField margin="dense" name="email" label="Email" fullWidth value={newAdmin.email} onChange={handleChange} />
@@ -189,9 +188,9 @@ const Dashboardadmin = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Popup edit Property Disini */}
+      {/* Popup edit Admin Disini */}
       <Dialog open={editOpen} onClose={() => setEditOpen(false)}>
-        <DialogTitle>Edit Property</DialogTitle>
+        <DialogTitle>Edit Admin</DialogTitle>
         <DialogContent>
           <TextField autoFocus margin="dense" name="name" label="Admin Name" fullWidth value={newAdmin.name} onChange={handleChange} />
           <TextField margin="dense" name="email" label="Email" fullWidth value={newAdmin.email} onChange={handleChange} />
