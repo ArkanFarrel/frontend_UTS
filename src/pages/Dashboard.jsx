@@ -141,7 +141,7 @@ const Dashboard = () => {
     <div className="flex">
       <SidebarComponent />
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: 1000 }}>
+        <TableContainer sx={{ maxHeight: 10000 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
