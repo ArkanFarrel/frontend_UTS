@@ -106,6 +106,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🤝 Acknowledgments
 - Thanks to all contributors who participated in this project
 - Special thanks to the Material-UI team for their comprehensive component library
-
-## 📞 Support
-For support, email [your-email@example.com] or create an issue in the repository.
