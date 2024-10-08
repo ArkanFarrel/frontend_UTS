@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/frontend_UTS/static/css/main.e8d9c8c6.css",
-    "main.js": "/frontend_UTS/static/js/main.5d4c1821.js",
+    "main.css": "/frontend_UTS/static/css/main.1543a406.css",
+    "main.js": "/frontend_UTS/static/js/main.5e596a4e.js",
     "static/media/rumah.jpg": "/frontend_UTS/static/media/rumah.3dfbc47ff3fb30e97e5d.jpg",
     "index.html": "/frontend_UTS/index.html",
-    "main.e8d9c8c6.css.map": "/frontend_UTS/static/css/main.e8d9c8c6.css.map",
-    "main.5d4c1821.js.map": "/frontend_UTS/static/js/main.5d4c1821.js.map"
+    "main.1543a406.css.map": "/frontend_UTS/static/css/main.1543a406.css.map",
+    "main.5e596a4e.js.map": "/frontend_UTS/static/js/main.5e596a4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8d9c8c6.css",
-    "static/js/main.5d4c1821.js"
+    "static/css/main.1543a406.css",
+    "static/js/main.5e596a4e.js"
   ]
 }
