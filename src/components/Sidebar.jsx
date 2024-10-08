@@ -168,6 +168,9 @@ const SidebarComponent = () => {
           {generateMenuItems(treeData)}
 
           <LogoutMenuItem
+            style={{
+              position: "relative"
+            }}
             icon={<ExitToAppIcon />}
             onClick={handleLogout}
           >
