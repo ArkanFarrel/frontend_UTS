@@ -140,45 +140,49 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <SidebarComponent />
-      <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: 10000 }}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map((column) => (
-                  <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
-                    {column.label}
-                  </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {Array.isArray(rows) && rows.map((row) => (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                  {columns.map((column) => {
-                    const value = row[column.id];
-                    return (
-                      <TableCell key={column.id} align={column.align}>
-                        {column.id === 'action' ? (
-                          <Box display="flex" justifyContent="flex-start" alignItems="center" gap={1}>
-                            <Button variant="outlined" onClick={handleAddClick}>Add</Button>
-                            <Button variant="outlined" startIcon={<EditIcon />} onClick={() => handleEditClick(row)}>Edit</Button>
-                            <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handleDeleteClick(row.id)}>Delete</Button>
-                          </Box>
-                        ) : (
-                          value
-                        )}
-                      </TableCell>
-                    );
-                  })}
+      <Box sx={{ width: '100%', overflow: 'hidden', p: 2 }}>
+        <Box display="flex" justifyContent="flex-end" mb={2}>
+          <Button variant="contained" onClick={handleAddClick}>Add</Button>
+        </Box>
+        <Paper sx={{ width: '100%' }}>
+          <TableContainer sx={{ maxHeight: 10000 }}>
+            <Table stickyHeader aria-label="sticky table">
+              <TableHead>
+                <TableRow>
+                  {columns.map((column) => (
+                    <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+                      {column.label}
+                    </TableCell>
+                  ))}
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Paper>
+              </TableHead>
+              <TableBody>
+                {Array.isArray(rows) && rows.map((row) => (
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                    {columns.map((column) => {
+                      const value = row[column.id];
+                      return (
+                        <TableCell key={column.id} align={column.align}>
+                          {column.id === 'action' ? (
+                            <Box display="flex" justifyContent="flex-start" alignItems="center" gap={1}>
+                              <Button variant="outlined" startIcon={<EditIcon />} onClick={() => handleEditClick(row)}>Edit</Button>
+                              <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handleDeleteClick(row.id)}>Delete</Button>
+                            </Box>
+                          ) : (
+                            value
+                          )}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
+      </Box>
 
-              {/* Popup add new Property disini */}
+      {/* Popup add new Property */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Add New Property</DialogTitle>
         <DialogContent>
@@ -194,7 +198,7 @@ const Dashboard = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Popup edit Property Disini */}
+      {/* Popup edit Property */}
       <Dialog open={editOpen} onClose={() => setEditOpen(false)}>
         <DialogTitle>Edit Property</DialogTitle>
         <DialogContent>
@@ -210,7 +214,7 @@ const Dashboard = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Popup delete Property Disini */}
+      {/* Popup delete Property */}
       <Dialog open={confirmOpen} onClose={handleCancelDelete}>
         <DialogTitle>Confirm Delete</DialogTitle>
         <DialogContent>

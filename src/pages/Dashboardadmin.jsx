@@ -137,6 +137,10 @@ const Dashboardadmin = () => {
   return (
     <div className="flex">
       <SidebarComponent />
+      <Box sx={{ width: '100%', overflow: 'hidden', p: 2 }}>
+      <Box display="flex" justifyContent="flex-end" mb={2}>
+          <Button variant="contained" onClick={handleAddClick}>Add</Button>
+        </Box>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
         <TableContainer sx={{ maxHeight: 1000 }}>
           <Table stickyHeader aria-label="sticky table">
@@ -158,7 +162,6 @@ const Dashboardadmin = () => {
                       <TableCell key={column.id} align={column.align}>
                         {column.id === 'action' ? (
                           <Box display="flex" justifyContent="flex-start" alignItems="center" gap={1}>
-                            <Button variant="outlined" onClick={handleAddClick}>Add</Button>
                             <Button variant="outlined" startIcon={<EditIcon />} onClick={() => handleEditClick(row)}>Edit</Button>
                             <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handleDeleteClick(row.id)}>Delete</Button>
                           </Box>
@@ -174,6 +177,7 @@ const Dashboardadmin = () => {
           </Table>
         </TableContainer>
       </Paper>
+              </Box>
 
               {/* Popup add new Admin disini */}
       <Dialog open={open} onClose={handleClose}>

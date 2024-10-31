@@ -10,7 +10,8 @@ import { useTheme } from '@mui/material/styles';
 const Listrumah = ({ id, title, type, price, location, status, description, onDelete }) => {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const theme = useTheme(); 
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Mendapatkan kondisi ukuran layar kecil (mobile)
+  // eslint-disable-next-line no-unused-vars
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleDeleteClick = () => {
     setConfirmOpen(true); 
