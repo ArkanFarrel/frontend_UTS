@@ -84,25 +84,25 @@ const propertyData = [
 ];
 
 const testimonials = [
-    {
-      name: "Danang Tri Wibowo",
-      role: "Agen",
-      feedback:
-        "Rumah123 membantu saya mendapatkan leads dari customer dengan optimal. Dengan memanfaatkan Feature Listing, calon pembeli datang setiap harinya.",
-    },
-    {
-      name: "Ananta Aji Wiguna",
-      role: "Pembeli",
-      feedback:
-        "Situsnya bagus, membantu dalam memberikan informasi untuk mencari rumah khususnya bagi yang suka cari-cari informasi.",
-    },
-    {
-      name: "Adeline Puspa",
-      role: "Agen",
-      feedback:
-        "Saya mendapatkan lebih banyak buyer setelah mengiklankan properti di Rumah123. Interface Rumah123 memudahkan saya mengatur promosi listing dengan baik.",
-    },
-  ];
+  {
+    name: "Danang Tri Wibowo",
+    role: "Agen",
+    feedback:
+      "Rumah123 membantu saya mendapatkan leads dari customer dengan optimal. Dengan memanfaatkan Feature Listing, calon pembeli datang setiap harinya.",
+  },
+  {
+    name: "Ananta Aji Wiguna",
+    role: "Pembeli",
+    feedback:
+      "Situsnya bagus, membantu dalam memberikan informasi untuk mencari rumah khususnya bagi yang suka cari-cari informasi.",
+  },
+  {
+    name: "Adeline Puspa",
+    role: "Agen",
+    feedback:
+      "Saya mendapatkan lebih banyak buyer setelah mengiklankan properti di Rumah123. Interface Rumah123 memudahkan saya mengatur promosi listing dengan baik.",
+  },
+];
 
 const Landingpage = () => {
   const navigate = useNavigate();
@@ -123,7 +123,7 @@ const Landingpage = () => {
             </div>
             <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
               <div className="hidden sm:ml-6 sm:flex space-x-4">
-                {["Home", "About us", "Dijual", "KPR"].map((item) => (
+                {["Home", "About us", "Dijual", "Disewakan"].map((item) => (
                   <a
                     key={item}
                     href="#"
@@ -175,10 +175,15 @@ const Landingpage = () => {
       </div>
 
       <div className="bg-gray-100 py-10 mt-10">
-        <h2 className="text-2xl font-bold text-center mb-3 mr-80">Kata Mereka yang Sudah Menggunakan Layanan Rumahku</h2>
+        <h2 className="text-2xl font-bold text-center mb-7 mr-80">
+          Kata Mereka yang Sudah Menggunakan Layanan Rumahku
+        </h2>
         <div className="flex justify-center flex-wrap space-x-4 px-6">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-4 max-w-xs min-w-[300px]">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-4 max-w-xs min-w-[300px]"
+            >
               <h3 className="font-semibold text-lg">{testimonial.name}</h3>
               <p className="text-gray-500 text-sm">{testimonial.role}</p>
               <p className="mt-2 text-gray-700">{testimonial.feedback}</p>
@@ -187,6 +192,42 @@ const Landingpage = () => {
         </div>
       </div>
 
+      <div className="bg-gray-50 rounded-lg shadow-md p-6 mx-auto w-full max-w-2xl my-10">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          Layanan Pengaduan Konsumen
+        </h2>
+
+        <div className="space-y-4">
+          <div className="text-gray-700">
+            <h3 className="text-lg font-medium">PT Web Marketing Indonesia</h3>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:infopengaduan@rumah123.com"
+                className="text-blue-600 hover:underline"
+              >
+                infopengaduan@rumah123.com
+              </a>
+            </p>
+          </div>
+
+          <div className="text-gray-700">
+            <h3 className="text-lg font-medium">
+              Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga (Ditjen
+              PKTN)
+            </h3>
+            <p>
+              WhatsApp Ditjen PKTN:{" "}
+              <a
+                href="https://wa.me/085311111010"
+                className="text-blue-600 hover:underline"
+              >
+                0853 1111 1010
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );
