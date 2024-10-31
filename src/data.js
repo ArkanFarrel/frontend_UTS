@@ -12,13 +12,13 @@ const data = [
     {
       id: 3,
       parent_id: 2,
-      name: "Create",
+      name: "Dashboard",
     },
-    {
-      id: 4,
-      parent_id: 2,
-      name: "Edit",
-    },
+    // {
+    //   id: 4,
+    //   parent_id: 2,
+    //   name: "Edit",
+    // },
     {
       id: 5,
       parent_id: null,

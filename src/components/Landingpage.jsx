@@ -175,8 +175,8 @@ const Landingpage = () => {
       </div>
 
       <div className="bg-gray-100 py-10 mt-10">
-        <h2 className="text-2xl font-bold text-left mb-3 ml-7">Kata Mereka yang Sudah Menggunakan Layanan Rumahku</h2>
-        <div className="flex overflow-x-scroll space-x-4 px-6">
+        <h2 className="text-2xl font-bold text-center mb-3 mr-80">Kata Mereka yang Sudah Menggunakan Layanan Rumahku</h2>
+        <div className="flex justify-center flex-wrap space-x-4 px-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-4 max-w-xs min-w-[300px]">
               <h3 className="font-semibold text-lg">{testimonial.name}</h3>

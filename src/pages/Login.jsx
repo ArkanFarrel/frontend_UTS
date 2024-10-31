@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username && password) {
-      navigate("/listrumah");
+      navigate("/dashboard");
     } else {
       alert("Tolong diisi");
     }
