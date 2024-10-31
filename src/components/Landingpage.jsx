@@ -83,9 +83,31 @@ const propertyData = [
   },
 ];
 
+const testimonials = [
+    {
+      name: "Danang Tri Wibowo",
+      role: "Agen",
+      feedback:
+        "Rumah123 membantu saya mendapatkan leads dari customer dengan optimal. Dengan memanfaatkan Feature Listing, calon pembeli datang setiap harinya.",
+    },
+    {
+      name: "Ananta Aji Wiguna",
+      role: "Pembeli",
+      feedback:
+        "Situsnya bagus, membantu dalam memberikan informasi untuk mencari rumah khususnya bagi yang suka cari-cari informasi.",
+    },
+    {
+      name: "Adeline Puspa",
+      role: "Agen",
+      feedback:
+        "Saya mendapatkan lebih banyak buyer setelah mengiklankan properti di Rumah123. Interface Rumah123 memudahkan saya mengatur promosi listing dengan baik.",
+    },
+  ];
+
 const Landingpage = () => {
   const navigate = useNavigate();
   const handleLogin = () => navigate("/login");
+  const handleRegister = () => navigate("/register");
 
   return (
     <>
@@ -118,6 +140,12 @@ const Landingpage = () => {
             >
               Login
             </button>
+            <button
+              onClick={handleRegister}
+              className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out"
+            >
+              Register
+            </button>
           </div>
         </div>
       </nav>
@@ -136,12 +164,25 @@ const Landingpage = () => {
             Rekomendasi Sesuai Pencarianmu
           </h2>
           <button className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
-            Lihat Semua
+            Lihat Selengkapnya
           </button>
         </div>
-        <div className="flex overflow-x-scroll p-4 space-x-4">
+        <div className="flex p-4 space-x-4">
           {propertyData.map((property, index) => (
             <PropertyCard key={index} {...property} />
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-gray-100 py-10 mt-10">
+        <h2 className="text-2xl font-bold text-left mb-3 ml-7">Kata Mereka yang Sudah Menggunakan Layanan Rumahku</h2>
+        <div className="flex overflow-x-scroll space-x-4 px-6">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-4 max-w-xs min-w-[300px]">
+              <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+              <p className="text-gray-500 text-sm">{testimonial.role}</p>
+              <p className="mt-2 text-gray-700">{testimonial.feedback}</p>
+            </div>
           ))}
         </div>
       </div>

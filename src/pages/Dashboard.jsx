@@ -341,7 +341,7 @@ const Dashboard = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Popup delete Property */}
+      {/* Popup Delete Property */}
       <Dialog open={confirmOpen} onClose={handleCancelDelete}>
         <DialogTitle>Confirm Delete</DialogTitle>
         <DialogContent>
