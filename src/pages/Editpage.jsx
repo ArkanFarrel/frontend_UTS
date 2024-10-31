@@ -1,12 +1,12 @@
-import React from 'react'
-import Dashboard from './Dashboard.jsx'
+import React from "react";
+import Dashboard from "./Dashboard.jsx";
 
 const Editpage = () => {
   return (
     <div>
-        <Dashboard />
+      <Dashboard />
     </div>
-  )
-}
+  );
+};
 
-export default Editpage
+export default Editpage;
